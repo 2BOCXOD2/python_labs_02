@@ -29,3 +29,39 @@ def validate_name_type(name):
 def validate_name_exist(name):
     if len(name) == 0:
         raise ValueError("Название транспортного средства не может быть пустым")
+    
+# Логическое состояние объекта
+def validate_service_level(current_level, max_level=6):
+    """
+    Проверяет текущий уровень обслуживания на превышение максимального предела.
+    """
+    if current_level >= max_level:
+        raise ValueError(f"Максимальный уровень обслуживания ({max_level}) достигнут!")
+
+def validate_fuel_amount(current_fuel, needed_fuel):
+    """
+    Проверяет достаточное количество топлива для поездки.
+    """
+    if current_fuel < needed_fuel:
+        raise ValueError("Недостаточно топлива для поездки!")
+
+def validate_positive_number(value):
+    """
+    Проверяет, что значение положительно и ненулевое.
+    """
+    if value <= 0:
+        raise ValueError("Значение должно быть положительным!")
+
+def validate_active_state(active_status):
+    """
+    Проверяет активное состояние объекта.
+    """
+    if not active_status:
+        raise ValueError("Объект не активирован!")
+
+def validate_fuel_limit(new_fuel, tank_capacity=100):
+    """
+    Проверяет заправку топлива относительно ёмкости бензобака.
+    """
+    if new_fuel > tank_capacity:
+        raise ValueError(f"Превышен максимальный объем бака ({tank_capacity} литров)!")

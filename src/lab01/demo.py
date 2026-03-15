@@ -55,3 +55,60 @@ if __name__ == "__main__":
 
     print(f"Стоимость проезда автобусом: {bus1.oplatit_proezd_Bus()} руб.")  # 4500 рублей
     print(f"Время в пути автобусом: {bus1.vremya_v_puti()} часов")  # ~1.67 часа
+
+
+    print("===============================================")
+    print("Логическое состояние объекта")
+
+    # Создание автомобиля
+    car1 = Car("Tesla Model S", 5, 250.0, "P100D")
+    print(car1.opisanie())
+
+    # Активация автомобиля
+    car1.activate()
+    print("Автомобиль активирован:", car1.active)
+
+    # Увеличение уровня обслуживания
+    try:
+        for i in range(7):
+            car1.upgrade()
+            print(f"Уровень обслуживания увеличен до {car1.service_level}")
+    except ValueError as err:
+        print(err)
+
+    # Поездка на автомобиле
+    try:
+        car1.drive(100)
+    except ValueError as err:
+        print(err)
+
+    # Создание автобуса
+    bus1 = Bus("Hyundai Universe", 40, 100.0, 2015)
+    print(bus1.opisanie())
+
+    # Активация автобуса
+    bus1.activate()
+    print("Автобус активирован:", bus1.active)
+
+    # Заливка топлива и поездка
+    try:
+        bus1.refill_fuel(50)
+        bus1.drive(40)
+    except ValueError as err:
+        print(err)
+
+    # Проверка границы топливного бака
+    try:
+        bus1.refill_fuel(60)  # Заведомо превышаем лимит
+    except ValueError as err:
+        print(err)
+
+
+    print("===============================================")
+    print("Обращение к атрибуту класса через класс и через экземпляр:")
+
+    # Пример доступа к атрибуту класса через класс
+    print(f"Максимальная скорость автомобиля: {Car.MAX_SPEED} км/ч")  # Если атрибут MAX_SPEED объявлен в классе Car
+
+    # Пример доступа к атрибуту через экземпляр
+    print(f"Скорость экземпляра car1: {car1.sr_skorost} км/ч")
