@@ -1,23 +1,16 @@
-
-'''
-class Ticket(Transport):
-    
-
-class Route(Transport):
-    
-
-class Driver(Transport):
-    
-'''
+from validate import validate_vmestimost, validate_sr_skorost, validate_name_type, validate_name_exist
 
 class Transport:
     def __init__(self, name: str, vmestimost: int, sr_skorost: float, rasstoyanie=None):
-        self._name = name                # Защищенный атрибут
-        self._vmestimost = vmestimost    # Защищенный атрибут
-        self._sr_skorost = sr_skorost    # Защищенный атрибут
-        self._rasstoyanie = rasstoyanie  # Защищенный атрибут
-        self.validate_vmestimost(vmestimost)
-        self.validate_sr_skorost(sr_skorost)
+        self._name = name
+        self._vmestimost = vmestimost
+        self._sr_skorost = sr_skorost
+        self._rasstoyanie = rasstoyanie
+        validate_vmestimost(vmestimost)  # Используем внешний валидатор
+        validate_sr_skorost(sr_skorost)  # Используем внешний валидатор
+        validate_name_type(name)
+        validate_name_exist(name)
+
 
     # Геттеры и сеттеры для всех основных атрибутов
     @property
@@ -64,18 +57,8 @@ class Transport:
         else:
             raise ValueError("Расстояние должно быть неотрицательным или пустым.")
 
-    # validate.py    
-        # Проверяем значения атрибутов
 
-
-    def validate_vmestimost(self, vmestimost):
-        if vmestimost < 1:
-            raise ValueError("В транспортном средстве не может быть меньше одного места")
-
-    def validate_sr_skorost(self, sr_skorost):
-        if sr_skorost < 1:
-            raise ValueError("Средняя скорость не может быть ниже 1")
-
+            
     # dunder-методы
     def __str__(self):
         """Возвращает удобочитаемое строковое представление."""
@@ -108,7 +91,7 @@ class Transport:
 
     def oplatit_proezd_Bus(self):
         if self.rasstoyanie is not None:
-            stoimost = self.rasstoyanie * 30
+            stoimost = self.rasstoyanie * 3
             return stoimost
         else:
             raise ValueError("Оплата невозможна без указанного расстояния")
@@ -167,7 +150,7 @@ class Bus(Transport):
 
     @god_vipuska.setter
     def god_vipuska(self, value):
-        if value >= 1900:
+        if (value >= 1900) and (value <= 2026):
             self._god_vipuska = value
         else:
             raise ValueError("Год выпуска должен быть позже 1900 года.")
@@ -196,7 +179,7 @@ class Bus(Transport):
 
 # demo.py
 
-
+"""
 # Проверка @property
 print("=======================================================")
 print("Проверка @property")
@@ -252,3 +235,4 @@ print(bus1 == bus3)  # Должно вернуть False
 # print(Auto_1.opisanie())
 # print(Bus_1.opisanie())
 
+"""
