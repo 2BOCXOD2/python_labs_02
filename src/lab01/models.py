@@ -28,9 +28,9 @@ class Transport:
         pass
 
     # Геттеры и сеттеры
-    @property
+    @property 
     def name(self):
-        return self._name
+        return self._name # Геттер: просто возвращает значение внутреннего атрибута
 
     @name.setter
     def name(self, value):
