@@ -43,7 +43,7 @@
 
 
 # Скриншот вывода demo.py:
-![01](https://github.com/2BOCXOD2/python_labs/blob/main/img/lab05/1.1.PNG)
+![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
 
 
 
