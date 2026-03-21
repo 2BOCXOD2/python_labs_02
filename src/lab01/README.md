@@ -47,12 +47,12 @@
 ## Демонстрация вывода описания созданных объектов:
 ### Car("Volkswagen Golf", 5, 120.0, "GTI")
 ### Bus("Neoplan", 40, 90.0, 2015)
-![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
 
 ## Изменение созданных объектов и вывод нового описания:
 ### car1.name = "Audi A4"
 ### bus1.god_vipuska = 2020
-![02](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![02](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/02%20Изменение%20и%20описание.PNG)
 
 ## Проверка корректности вводимых значений:
 ### Нулевая вместимость: car1.vmestimost = 0
@@ -60,28 +60,28 @@
 ### Отрицательная средняя скорость: Auto_exp = Car("?", 2, -30, "10")
 ### Неправильный тип имени: Auto_exp_2 = Car(int(1.2), 2, 30, "10")
 ### Пустое имя: Auto_exp_3 = Car("", 2, 30, "10")
-![03](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![03](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/03%20Проверка%20корректности%20вводимых%20значений.PNG)
 
 ## Вычисление стоимости проезда и времени в пути:
 ### car1.rasstoyanie = 100
 ### bus1.rasstoyanie = 150
-![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/04%20Время%20в%20пути%20и%20стоимость%20проезда.PNG)
 
 ## Логическое состояние объекта:
 ### Создание машины: car1 = Car("Tesla Model S", 5, 250.0, "P100D")
 ### Активация: car1.activate()
 ### Повышение уровня: car1.upgrade()
 ### Поездка на 100 км: car1.drive(100)
-![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/05%20Логическое%20состояние%20машины.PNG)
 
 ### Создание автобуса: bus1 = Bus("Hyundai Universe", 40, 100.0, 2015)
 ### Активация: bus1.activate()
 ### Заливка топлива: bus1.refill_fuel(50)
 ### Поездка: bus1.drive(40)
 ### Проверка бака. Наливаем больше вместимомти: bus1.refill_fuel(60)
-![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/06%20Логическое%20состояние%20автобуса.PNG)
 
 ## Обращение к атрибуту класса через класс и через экземпляр:
 ### Доступ к атрибуту класса через класс: Car.MAX_SPEED
 ### Доступ к атрибуту через экземпляр: car1.sr_skorost
-![07](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01.PNG)
+![07](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/07%20Доступ.PNG)
