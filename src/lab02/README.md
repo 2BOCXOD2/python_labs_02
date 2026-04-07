@@ -8,19 +8,19 @@ car2 = Car("Toyota", 5, 180.0, "Camry")
 fleet.add(car1)
 fleet.add(car2)
 ### Результат через len:
-![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/1%20Добавили%20автомобили.PNG)
 
 ### Список через get_all:
-![02](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![02](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/2%20Список%20автомобилей.PNG)
 
 ### Вывод всех элементов через for:
-![03](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![03](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/3%20Итерация%20по%20автопарку.PNG)
 
 ### Удаление элемента:
-![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/4%20Удаление.PNG)
 
 ### Повторный вывод  после удаления:
-![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/5%20Проверка%20после%20удаления.PNG)
 
 # Задание на 4
 ## Пересоздадим автопарк для чистоты эксперимента
@@ -30,13 +30,13 @@ fleet.add(car2)
 ### fleet.add(car1)
 ### fleet.add(car2)
 ### Автомобили успешно добавлены, но при создании дубликата (duplicate_car = Car("Lada", 4, 150, "Granta")) вызывается ошибка:
-![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/6%20Проверка%20на%20дубликат.PNG)
 
 ### Дальше идёт проверка на уникальность ID:
-![07](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![07](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/7%20Проверка%20на%20ID.PNG)
 
 ### Далее демонстрируется поиск среди объектов на автостоянке (found_car = fleet.find_by_name("Toyota")):
-![08](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![08](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/8%20Поиск.PNG)
 
 # Задание на 5
 ## Создаём новую автостоянку:
@@ -46,10 +46,10 @@ fleet.add(car2)
 ### car3 = Car("Kia", 5, 150.0, "Rio", price=1_500_000)
 
 ## Проверяем индексацию:
-![09](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![09](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/9%20Индексация.PNG)
 
 ## Удаление по индексу:
-![10](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![10](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/10%20Удаление%20по%20индексу.PNG)
 
 ## Сортировка
 ### fleet = Fleet()
@@ -57,11 +57,11 @@ fleet.add(car2)
 ### fleet.add(Car("BMW", 4, 220, "3 Series", price=3_500_000))
 ### fleet.add(Car("Audi", 5, 210, "A4", price=3_200_000))
 ## До сортировки по цене:
-![11](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![11](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/11%20До%20сортировки.PNG)
 ## После сортировке по цене:
-![12](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![12](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/12%20После%20сортировки.PNG)
 ## Универсальная сортировка по имени (Z-A):
-![13](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![13](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/13%20сортировка%20по%20имени.PNG)
 
 ## Фильтрация
 ### fleet = Fleet()
@@ -69,9 +69,9 @@ fleet.add(car2)
 ### fleet.add(Car("Mazda", 5, 180, "6", price=2_200_000))
 ### fleet.add(Car("Tesla", 5, 200, "Model S", price=12_000_000))
 ## Исходная коллекция:
-![14](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![14](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/14%20исходная%20коллекция.PNG)
 ## Отфильтрованная коллекция (авто дороже 2 млн руб.):
-![15](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab01/01%20Создание%20и%20описание.PNG)
+![15](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
 
 
 
