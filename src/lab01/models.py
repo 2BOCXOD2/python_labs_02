@@ -1,5 +1,5 @@
 
-from validate import validate_vmestimost, validate_sr_skorost, validate_name_type, validate_name_exist, \
+from .validate import validate_vmestimost, validate_sr_skorost, validate_name_type, validate_name_exist, \
                      validate_active_state, validate_fuel_amount, validate_fuel_limit, validate_positive_number, \
                      validate_service_level
 
@@ -111,10 +111,13 @@ class Transport:
 class Car(Transport):
     MAX_SPEED = 300  # Максимально возможная скорость автомобиля
     
-    def __init__(self, name, vmestimost, sr_skorost, model):
+    def __init__(self, name, vmestimost, sr_skorost, model, price=0):
         super().__init__(name, vmestimost, sr_skorost)
         self._model = model
         self.service_level = 0  # Уровень технического обслуживания (может расти до 6)
+        # Генерируем уникальный ID для каждого автомобиля (для лабы 2)
+        self.id = id(self)
+        self.price = price
 
     def upgrade(self):
         """Повышение уровня обслуживания (до максимум 6)"""
@@ -134,6 +137,14 @@ class Car(Transport):
     @model.setter
     def model(self, value):
         self._model = value  # Просто присваиваем значение без дополнительной валидации
+
+    @property
+    def id(self):
+        return self._id
+
+    @id.setter
+    def id(self, value):
+        self._id = value
 
     def __str__(self):
         return f"Машина '{self.name}' ({self.model}), вместимость {self.vmestimost}, средняя скорость {self.sr_skorost} км/ч."
