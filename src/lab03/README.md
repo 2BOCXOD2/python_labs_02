@@ -59,7 +59,7 @@ plane = Airplane(
 ![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/5%20Вывод%20объектов%20коллекции.PNG)
 
 ## Демонстрация полиморфного поведения (вызов calculate_price()):
-total_cost = mixed_fleet.calculate_total_price()
+### total_cost = mixed_fleet.calculate_total_price()
 ![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/6%20Вывод%20общей%20стоимости.PNG)
 
 ## Проверка через instans() в сценарии 2.
