@@ -50,10 +50,9 @@ plane = Airplane(
 # Задание на 4
 
 ## Добавление объектов разного типа в коллекцию:
-mixed_fleet.add(car1)
-mixed_fleet.add(ship1)
-mixed_fleet.add(plane1)
-
+### mixed_fleet.add(car1)
+### mixed_fleet.add(ship1)
+### mixed_fleet.add(plane1)
 ![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/4%20Добавление%20объектов%20разных%20типов%20в%20коллекцию.PNG)
 
 ## Вывод объектов из коллекции (используется переопределенный __str__):
