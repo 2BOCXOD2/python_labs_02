@@ -37,14 +37,14 @@ plane = Airplane(
         max_flight_altitude_m=13000,
         fuel_consumption_lph=12000
     )
-![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![01](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/1.PNG)
 
 ## Вывод объектов
-![02](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![02](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/2%20Использование%20новых%20методов.PNG)
 
 
 ## Использование методов базового и дочернего класса. Работа через super()
-![03](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![03](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/3%20проверка%20методов.PNG)
 
 
 # Задание на 4
@@ -53,14 +53,15 @@ plane = Airplane(
 mixed_fleet.add(car1)
 mixed_fleet.add(ship1)
 mixed_fleet.add(plane1)
-![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+
+![04](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/4%20Добавление%20объектов%20разных%20типов%20в%20коллекцию.PNG)
 
 ## Вывод объектов из коллекции (используется переопределенный __str__):
-![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![05](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/5%20Вывод%20объектов%20коллекции.PNG)
 
 ## Демонстрация полиморфного поведения (вызов calculate_price()):
 total_cost = mixed_fleet.calculate_total_price()
-![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![06](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/6%20Вывод%20общей%20стоимости.PNG)
 
 ## Проверка через instans() в сценарии 2.
 
@@ -68,15 +69,15 @@ total_cost = mixed_fleet.calculate_total_price()
 # Задание на 5
 
 ## СЦЕНАРИЙ 1: ПОЛИМОРФИЗМ И ЕДИНЫЙ ИНТЕРФЕЙС
-![07](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![07](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/7%20Первый%20сценарий.PNG)
 
 ## СЦЕНАРИЙ 2: ФИЛЬТРАЦИЯ ПО ТИПУ
 
-![08](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![08](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/8%20торой%20сценарий%20инстанс%20и%20фильтрация.PNG)
 
 ## СЦЕНАРИЙ 3: КОМБИНИРОВАННЫЙ СЦЕНАРИЙ
 
-![09](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab02/15%20Отфильтрованная%20коллекция.PNG)
+![09](https://github.com/2BOCXOD2/python_labs_02/blob/main/images/lab03/9%20Тритий%20сценарий%20вызов%20спец.метода.PNG)
 
 
 
