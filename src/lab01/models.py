@@ -2,7 +2,7 @@
 from .validate import validate_vmestimost, validate_sr_skorost, validate_name_type, validate_name_exist, \
                      validate_active_state, validate_fuel_amount, validate_fuel_limit, validate_positive_number, \
                      validate_service_level
-
+# Если стоит точка (.validate), то работает вторая лаба, если точки нет - первая
 
 class Transport:
     def __init__(self, name: str, vmestimost: int, sr_skorost: float, rasstoyanie=None):
@@ -105,6 +105,24 @@ class Transport:
             return stoimost
         else:
             raise ValueError("Оплата невозможна без указанного расстояния")
+    
+    # lab03
+    def calculate_price(self) -> float:
+        """
+        Базовая реализация расчета цены.
+        По умолчанию возвращает 0.
+        Дочерние классы должны переопределить этот метод.
+        """
+        return 0.0
+    
+    # НОВЫЙ ИНТЕРФЕЙСНЫЙ МЕТОД lab03
+    def process(self) -> str:
+        """
+        Интерфейсный метод для выполнения действия.
+        Базовая реализация ничего не делает.
+        Дочерние классы ДОЛЖНЫ переопределить этот метод.
+        """
+        return ""
 
 
 
@@ -162,6 +180,16 @@ class Car(Transport):
 
     def opisanie(self):
         return f"Машина {self.name}, модель {self.model}: вместимость - {self.vmestimost}, средняя скорость - {self.sr_skorost}"
+
+    # lab03
+    # НОВАЯ РЕАЛИЗАЦИЯ ИНТЕРФЕЙСА для Car
+    def process(self) -> str:
+        """Моделирует процесс начала поездки на автомобиле."""
+        return f"Автомобиль '{self.name}' ({self.model}) завел двигатель. Поехали!"
+    
+    def calculate_price(self) -> float:
+        """Цена автомобиля зависит от вместимости и скорости."""
+        return self.vmestimost * self.sr_skorost * 5
 
 
 class Bus(Transport):
