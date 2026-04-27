@@ -9,7 +9,7 @@ ship = CargoShip(
         route_length_nm=4800
     )
     
-    plane = Airplane(
+plane = Airplane(
         name="Боинг-747",
         vmestimost=420,
         sr_skorost=900.0,
