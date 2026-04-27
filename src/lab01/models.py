@@ -137,6 +137,12 @@ class Car(Transport):
         self.id = id(self)
         self.price = price
 
+    def to_string(self) -> str:
+        """Реализация интерфейса Printable для автомобиля."""
+        return (f"   Автомобиль: {self.name} ({self.model})\n"
+                f"   Вместимость: {self.vmestimost} чел.\n"
+                f"   Средняя скорость: {self.sr_skorost} км/ч")
+
     def upgrade(self):
         """Повышение уровня обслуживания (до максимум 6)"""
         validate_service_level(self.service_level)

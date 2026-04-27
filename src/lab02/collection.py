@@ -1,5 +1,75 @@
-from typing import Type, List, Iterator, Callable
-from src.lab01.models import Car, Transport  # Импортируем самый базовый класс
+'''
+from typing import Type, List, Iterator, Callable, TypeVar
+from src.lab01.models import Car, Transport 
+
+T = TypeVar('T')
+
+class Fleet:
+    """
+    Универсальная коллекция для хранения любых видов транспорта.
+    Здесь НЕТ проверки на дубликаты по ID, чтобы она работала с ЛЮБЫМ транспортом.
+    """
+    def __init__(self):
+        self._items: List = [] 
+
+    def add(self, item) -> None: 
+        self._items.append(item)
+
+    def remove(self, item: Transport) -> None:
+        """Удаляет объект из коллекции."""
+        self._items.remove(item)
+
+    def get_all(self) -> List[Transport]:
+        """Возвращает список всех объектов."""
+        return self._items
+
+    # --- НОВЫЙ МЕТОД: Демонстрация полиморфизма ---
+    def calculate_total_price(self) -> float:
+        """
+        Демонстрирует полиморфное поведение.
+        Вызывает метод calculate_price() у каждого объекта.
+        """
+        total = 0.0
+        print("Расчет стоимости для каждого объекта:")
+        
+        for transport in self._items:
+            # Полиморфизм: Python сам вызовет нужный метод
+            total += transport.calculate_price()
+        
+        return total
+    
+
+    # lab04!!!
+
+    # --- НОВЫЙ МЕТОД: УНИВЕРСАЛЬНАЯ ФИЛЬТРАЦИЯ ---
+    def filter_by_interface(self, interface_type) -> 'Fleet':
+        """
+        Возвращает новую коллекцию с объектами, реализующими заданный интерфейс.
+        """
+        new_fleet = Fleet()
+        for transport in self._items:
+            if isinstance(transport, interface_type):
+                new_fleet.add(transport)
+        return new_fleet
+
+    # --- НОВЫЙ МЕТОД: СОРТИРОВКА ЧЕРЕЗ ИНТЕРФЕЙС ---
+    def sort_by_comparable(self) -> None:
+        """
+        Сортирует коллекцию.
+        """
+        for item in self._items:
+            # Проверка на наличие атрибута 'compare_to', чтобы избежать жесткой привязки к интерфейсу
+            if not hasattr(item, 'compare_to'):
+                raise TypeError(f"Невозможно отсортировать. Объект {getattr(item, 'name', 'Без имени')} не имеет метода compare_to.")
+        
+        self._items.sort(key=lambda x: x.name)
+'''
+### lab02 ################################################
+
+from typing import Type, List, Iterator, Callable, TypeVar
+from src.lab01.models import Car, Transport  # Импортируем самый базовый класс # lab02
+
+T = TypeVar('T')
 
 class Fleet:
     """
@@ -8,9 +78,9 @@ class Fleet:
     """
     def __init__(self):
         # Может хранить ЛЮБОЙ объект, наследующий Transport
-        self._items: List[Transport] = [] 
+        self._items: List = [] # self._items: List[Transport] = [] # lab02
 
-    def add(self, item: Transport) -> None:
+    def add(self, item) -> None: # def add(self, item: Transport) -> None: # В лабе 2 вот это
         """
         Добавляет объект в коллекцию.
         Теперь мы не проверяем дубликаты, чтобы избежать ошибок с CargoShip/Airplane.
@@ -39,6 +109,32 @@ class Fleet:
             total += transport.calculate_price()
         
         return total
+
+
+    # lab04!!!
+    # --- НОВЫЙ МЕТОД: УНИВЕРСАЛЬНАЯ ФИЛЬТРАЦИЯ ---
+    def filter_by_interface(self, interface_type) -> 'Fleet':
+        """
+        Возвращает новую коллекцию с объектами, реализующими заданный интерфейс.
+        """
+        new_fleet = Fleet()
+        for transport in self._items:
+            if isinstance(transport, interface_type):
+                new_fleet.add(transport)
+        return new_fleet
+
+    # --- НОВЫЙ МЕТОД: СОРТИРОВКА ЧЕРЕЗ ИНТЕРФЕЙС ---
+    def sort_by_comparable(self) -> None:
+        """
+        Сортирует коллекцию.
+        """
+        for item in self._items:
+            # Проверка на наличие атрибута 'compare_to', чтобы избежать жесткой привязки к интерфейсу
+            if not hasattr(item, 'compare_to'):
+                raise TypeError(f"Невозможно отсортировать. Объект {getattr(item, 'name', 'Без имени')} не имеет метода compare_to.")
+        
+        self._items.sort(key=lambda x: x.name)
+
 
     # --- РЕАЛИЗАЦИЯ СПЕЦИАЛЬНЫХ МЕТОДОВ ---
     def __len__(self) -> int:
@@ -79,6 +175,8 @@ class Fleet:
         from src.lab03.models import CargoShip # Импорт здесь, чтобы избежать циклических зависимостей
         return self.filter_by_type(CargoShip)
 
+
+        
 
 ####################
 '''
