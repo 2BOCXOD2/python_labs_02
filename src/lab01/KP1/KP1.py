@@ -7,7 +7,8 @@ MRO (Method Resolution Order) — это последовательность, �
 (типа class Class3(Class1, Class2) сначала проверится класс 1, а потом класс 2).
 
 """
-
+############################
+'''
 class Student:
     def __init__(self, name: str, gpa: float):
         self._name = name
@@ -43,8 +44,8 @@ class StudentGroup:
             if student.gpa >= min_gpa:
                 horoshie_studenty.append(student)
         return horoshie_studenty
-    
-
+'''
+##################################
 
 """
 group = StudentGroup()
@@ -56,3 +57,17 @@ top_students = group.get_top_students(4)
 for s in top_students:
     print(s)
 """
+##################################
+
+from abc import ABC, abstractmethod
+
+
+class serrialise(ABC):
+    @abstractmethod
+    def serrialise():
+        ...
+    
+class User(serrialise):
+    ...
+
+_ = User()

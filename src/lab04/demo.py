@@ -171,3 +171,5 @@ if __name__ == "__main__":
 
 
 # python -m src.lab04.demo  Запуск через терминал
+
+
