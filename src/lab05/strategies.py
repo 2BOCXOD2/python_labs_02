@@ -7,7 +7,7 @@ from src.lab03.models import CargoShip, Airplane # Для фильтрации �
 
 def by_name_asc(item):
     """Стратегия: Сортировка по имени (по возрастанию)."""
-    return item.name
+    return item.name 
 
 def by_price_desc(item):
     """Стратегия: Сортировка по цене (по убыванию)."""

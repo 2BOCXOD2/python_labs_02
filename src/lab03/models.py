@@ -31,6 +31,18 @@ class CargoShip(Transport):
         return round(days, 2)
     
 
+    # -------------------- Для лабы №6
+
+    # НОВЫЙ МЕТОД для протокола Displayable
+    def display(self) -> str:
+        return f"[Корабль] {self.name} | Груз: {self.cargo_capacity_tons}т | Маршрут: {self.route_length_nm}м. миль"
+    
+    # НОВЫЙ МЕТОД для протокола Scorable
+    def score(self) -> float:
+        """Оценка корабля по его грузоподъемности."""
+        return self.cargo_capacity_tons / 25
+
+
 
 
 class Airplane(Transport):
@@ -61,6 +73,19 @@ class Airplane(Transport):
         flight_hours = fuel_tank_liters / self.fuel_consumption_lph
         distance_km = self.sr_skorost * flight_hours
         return round(distance_km, 2)
+    
+
+    # -------------------- Для лабы №6
+
+
+    # НОВЫЙ МЕТОД для протокола Displayable
+    def display(self) -> str:
+        return f"[Самолет] {self.name} | Пассажиров: {self.vmestimost} | Высота: {self.max_flight_altitude_m}м"
+    
+    # НОВЫЙ МЕТОД для протокола Scorable
+    def score(self) -> float:
+        """Оценка самолета по его скорости."""
+        return self.sr_skorost * 10
 
 
 
