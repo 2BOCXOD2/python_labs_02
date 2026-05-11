@@ -71,7 +71,7 @@ def main():
     print("\n1. ДЕМОНСТРАЦИЯ МЕТОДА find():")
     
     # 1.1: Поиск элемента (элемент найден)
-    found_car = cars.find(lambda c: c.name == "Mercedes E200")
+    found_car = cars.find(lambda c: c.name == "Mercedes Caban")
     if found_car:
         print(f" - Найдено: {found_car.name}")
     else:
@@ -171,3 +171,15 @@ if __name__ == "__main__":
 
 
 # Вызов через терминал:     python -m src.lab06.demo
+
+
+'''
+def a(x):
+    def b(y):
+        x * y
+    return b()
+
+a2 = a(2)
+
+print(a2(3))  # = 6
+'''
