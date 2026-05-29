@@ -1,0 +1,46 @@
+[
+    {
+        "type": "Car",
+        "data": {
+            "name": "МАЗДА",
+            "vmestimost": 5,
+            "sr_skorost": 160.0,
+            "active": false,
+            "model": "Мазда",
+            "price": 1000000.0
+        }
+    },
+    {
+        "type": "CargoShip",
+        "data": {
+            "name": "Дельфин",
+            "vmestimost": 1300,
+            "sr_skorost": 50.0,
+            "active": false,
+            "cargo_capacity_tons": 10000,
+            "route_length_nm": 22
+        }
+    },
+    {
+        "type": "Airplane",
+        "data": {
+            "name": "Стриж",
+            "vmestimost": 120,
+            "sr_skorost": 350.0,
+            "active": false,
+            "max_flight_altitude_m": 1500,
+            "fuel_consumption_lph": 20
+        }
+    },
+    {
+        "type": "Car",
+        "data": {
+            "name": "NEWCAR",
+            "vmestimost": 6,
+            "sr_skorost": 1.0,
+            "active": false,
+            "model": "NEWNEWNEW",
+            "price": 100000000.0
+        }
+    }
+]

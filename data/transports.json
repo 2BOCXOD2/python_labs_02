@@ -1,0 +1,13 @@
+[
+    {
+        "type": "Car",
+        "data": {
+            "name": "ауа",
+            "vmestimost": 2,
+            "sr_skorost": 123.0,
+            "active": false,
+            "model": "ваимку",
+            "price": 111222233.0
+        }
+    }
+]
